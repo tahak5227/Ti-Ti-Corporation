@@ -1,0 +1,441 @@
+:root {
+    --green: #1e6b2f;
+    --green-dark: #14491f;
+    --orange: #e8552b;
+    --ink: #1d2420;
+    --paper: #fff;
+    --soft: #f1f5f2;
+    --line: #d5ddd7
+}
+
+body {
+    font-family: Barlow, system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--paper)
+}
+
+html[lang=ur] body {
+    font-family: "Noto Nastaliq Urdu", serif;
+    line-height: 2
+}
+
+h1,
+h2,
+h3,
+.brand {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    letter-spacing: .2px
+}
+
+html[lang=ur] h1,
+html[lang=ur] h2,
+html[lang=ur] h3,
+html[lang=ur] .brand {
+    font-family: "Noto Nastaliq Urdu", serif;
+    font-weight: 600
+}
+
+.site-header {
+    background: var(--green);
+    position: sticky;
+    top: 0;
+    z-index: 20
+}
+
+.brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem
+}
+
+.brand span {
+    font-weight: 600;
+    opacity: .85
+}
+
+.hero {
+    background: var(--green);
+    color: #fff;
+    padding: 3.5rem 0 4rem;
+    border-bottom: 8px solid var(--orange)
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    max-width: 16ch;
+    line-height: 1.05
+}
+
+.hero .lead {
+    max-width: 48ch;
+    opacity: .92
+}
+
+.btn-brand {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #fff;
+    font-weight: 500
+}
+
+.btn-brand:hover {
+    background: #c9441f;
+    border-color: #c9441f;
+    color: #fff
+}
+
+.btn:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: 2px
+}
+
+.chip {
+    border: 1px solid var(--green);
+    background: #fff;
+    color: var(--green);
+    border-radius: 999px;
+    padding: .25rem .8rem;
+    font-size: .9rem
+}
+
+.chip.active {
+    background: var(--green);
+    color: #fff
+}
+
+.item {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.item .ph {
+    aspect-ratio: 4/3;
+    background: var(--soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8a9a8f;
+    font-size: .85rem
+}
+
+.item img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block
+}
+
+.item .body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    flex: 1
+}
+
+.item h3 {
+    font-size: 1.35rem;
+    margin: 0
+}
+
+.item .tag {
+    font-size: .8rem;
+    color: var(--green);
+    font-weight: 500
+}
+
+.item p {
+    margin: 0;
+    font-size: .95rem;
+    flex: 1
+}
+
+.actions {
+    display: flex;
+    gap: .5rem
+}
+
+.actions .btn {
+    flex: 1
+}
+
+.btn-call {
+    background: var(--green);
+    color: #fff
+}
+
+.btn-call:hover {
+    background: var(--green-dark);
+    color: #fff
+}
+
+.btn-wa {
+    background: #fff;
+    border: 1px solid var(--green);
+    color: var(--green)
+}
+
+.person {
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 6px;
+    padding: .9rem 1rem
+}
+
+.person .n {
+    font-weight: 500
+}
+
+@media (prefers-reduced-motion:reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important
+    }
+}
+
+.brand-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 2px
+}
+
+.brand-text span {
+    font-weight: 600;
+    opacity: .85
+}
+
+.brand-text .corp {
+    font-weight: 600;
+    opacity: .85
+}
+
+@media (max-width:430px) {
+    .brand-text {
+        font-size: 1.25rem
+    }
+
+    .brand-text .corp {
+        display: none
+    }
+}
+
+.hero-media {
+    position: relative;
+    aspect-ratio: 4/3;
+    isolation: isolate;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 28px 8px 28px 8px;
+    overflow: hidden;
+    background: var(--green-dark);
+    color: #fff;
+    box-shadow: 0 24px 55px rgba(8, 29, 15, .35), 0 0 0 8px rgba(255, 255, 255, .08);
+    transform: rotate(1deg)
+}
+
+.hero-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.hero-media::after {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 26, 14, .02) 28%, rgba(10, 26, 14, .78) 100%);
+    content: ""
+}
+
+.hero-panel {
+    position: absolute;
+    z-index: 1;
+    inset: auto 0 0;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem
+}
+
+.hero-panel-heading {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    font-size: 1.1rem
+}
+
+.hero-panel-heading img {
+    width: 42px;
+    height: 42px;
+    border: 2px solid rgba(255, 255, 255, .8);
+    border-radius: 50%;
+    background: #fff;
+    padding: 1px
+}
+
+.hero-panel ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+    list-style: none;
+    font-size: .85rem
+}
+
+.hero-panel li {
+    padding: .3rem .7rem;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 999px;
+    background: rgba(12, 39, 20, .52);
+    backdrop-filter: blur(8px)
+}
+
+@media (max-width:991px) {
+    .hero-media {
+        aspect-ratio: 16/9
+    }
+
+    .hero {
+        padding: 2.2rem 0 2.5rem
+    }
+}
+
+@media (max-width:575px) {
+    .hero-panel {
+        padding: 1rem
+    }
+
+    .hero-panel-heading img {
+        width: 36px;
+        height: 36px
+    }
+
+    .hero-panel ul {
+        gap: .35rem;
+        font-size: .75rem
+    }
+
+    .hero-panel li {
+        padding: .2rem .55rem
+    }
+}
+
+.filters {
+    position: sticky;
+    top: 60px;
+    z-index: 10;
+    background: #fff;
+    padding: .6rem 0;
+    border-bottom: 1px solid var(--line)
+}
+
+.chips {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap
+}
+
+@media (max-width:767px) {
+    .chips {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: .2rem
+    }
+
+    .chip {
+        white-space: nowrap
+    }
+}
+
+a.item {
+    text-decoration: none;
+    color: inherit
+}
+
+.item p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 0 0 auto
+}
+
+.item .more {
+    color: var(--orange);
+    font-weight: 500;
+    font-size: .9rem;
+    margin-top: auto
+}
+
+@media (max-width:575px) {
+    .item .body {
+        padding: .6rem
+    }
+
+    .item h3 {
+        font-size: 1.1rem
+    }
+
+    .item p {
+        display: none
+    }
+}
+
+.gallery {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--soft)
+}
+
+.gallery img {
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    background: #fff
+}
+
+.ph.big {
+    aspect-ratio: 4/3;
+    background: var(--soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8a9a8f
+}
+
+.gallery .carousel-control-prev-icon,
+.gallery .carousel-control-next-icon {
+    filter: invert(1);
+    background-color: rgba(0, 0, 0, .35);
+    border-radius: 50%;
+    background-size: 55%
+}
+
+.gallery .carousel-indicators [data-bs-target] {
+    background-color: var(--green)
+}
+
+.price-box {
+    border: 1px solid var(--green);
+    border-radius: 6px;
+    padding: 1rem;
+    background: var(--soft)
+}
+
+.specs th {
+    width: 40%;
+    font-weight: 500
+}
